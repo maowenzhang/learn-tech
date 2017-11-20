@@ -1,6 +1,9 @@
 
 *.exe
 *.swp
+
+
+*.opendb
 *.suo
 *.db
 *.vs
@@ -12,6 +15,8 @@
 *.ilk
 *.tlog
 *.idb
+*.iobj
+*.ipdb
 
 *.un~
 .gitignore~
