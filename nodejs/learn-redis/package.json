@@ -1,0 +1,17 @@
+{
+  "name": "learn-redis",
+  "description": "learn redis",
+  "version": "0.0.1",
+  "author": "zhanglo",
+  "dependencies": {
+    "redis": "0.11.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  },
+  "devDependencies": {},
+  "files": [],
+  "scripts": {
+    "start": "node app"
+  }
+}
