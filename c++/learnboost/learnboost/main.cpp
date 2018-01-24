@@ -13,15 +13,21 @@
 
 void testDirectoryPermission() {
     //std::string strPath = "~/tmp/testBoostPermission";
-    std::string strPath = "/Users/fusionm/tmp/testBoostPermission";
+    //std::string strPath = "/Users/fusionm/tmp/testBoostPermission";
+	std::string strPath = "C:\\ProgramData\\Autodesk\\test";
     boost::filesystem::path path = strPath;
-    path /= "testSubFolder";
+    path /= "lori";
+    //path /= "test.txt";
     if(!boost::filesystem::is_directory(path))
     {
         try
         {
             boost::filesystem::create_directory(path);
-            boost::filesystem::permissions(path, boost::filesystem::perms::all_all); // grant permission for all operations
+			boost::system::error_code ec;
+            boost::filesystem::permissions(path, boost::filesystem::perms::all_all, ec); // grant permission for all operations
+			int iValue = ec.value();
+			std::string msg = ec.message();
+			iValue = iValue + 1 - 1;
         }
         catch(boost::filesystem::filesystem_error& ex)
         {
